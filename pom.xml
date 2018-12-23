@@ -19,6 +19,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
      <swagger.version>2.6.1</swagger.version>
+     <tomcat.version>7.0.69</tomcat.version>
   </properties>
 
 	 <build>
@@ -32,13 +33,18 @@
                 </configuration>
             </plugin>
 
-
             <!--testng打jar包运行的插件引入-->
 
         </plugins>
     </build>
 
   <dependencies>
+  		<!-- 此处坑了我3天，因为：springboot默认支持的是Tomcat8，so本地如果是以下版本需指定下 -->
+		<dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-juli</artifactId>
+		    <version>${tomcat.version}</version>
+		</dependency>
   		
   		<dependency>
            <groupId>org.apache.httpcomponents</groupId>
