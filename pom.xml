@@ -28,13 +28,40 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
             <!--testng打jar包运行的插件引入-->
-
+            <plugin>
+            	<groupId>org.springframework.boot</groupId>
+            	<artifactId>spring-boot-maven-plugin</artifactId>
+            	<configuration>
+            		<!-- 入口类 -->
+            		<mainClass>com.sunjian.Application</mainClass>
+            	</configuration>
+            	<!-- 执行打包 -->
+            	<executions>
+            		<execution>
+            			<goals>
+            				<goal>repackage</goal>
+            			</goals>
+            		</execution>
+            	</executions>
+            </plugin>
+            <!-- 打包依赖库 -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+					<compilerArguments>
+						<extdirs>${project.basedir}/lib</extdirs>
+					</compilerArguments>
+				</configuration>
+			</plugin>
         </plugins>
     </build>
 
