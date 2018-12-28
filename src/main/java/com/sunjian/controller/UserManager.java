@@ -16,6 +16,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * swagger访问地址：http://localhost:8888/swagger-ui.html
+ * @author sunjian
+ *
+ */
 
 @Log4j
 @RestController
@@ -23,7 +28,6 @@ import java.util.Objects;
 @RequestMapping("v1")
 public class UserManager {
 	//首先获取一个执行sql语句的对象
-
     @Autowired
     private SqlSessionTemplate template;
 
@@ -40,12 +44,35 @@ public class UserManager {
 
         return false;
     }
+    
+    @ApiOperation(value="获取单条用户信息",httpMethod="GET")
+    @RequestMapping(value="/getOneUserInfo",method=RequestMethod.GET)
+    public User getOneUserInfo(HttpServletRequest request,@RequestParam Integer id){
+    	//声明一个用户对象
+    	User user;
+    	boolean x = verifyCookies(request);
+    	if (x) {			
+    		//获取当前用户表中的用户数
+    		int i = template.selectOne("userCount");
+    		System.out.println("用户表中的条数："+i);
+    		//如果存在用户，获取传入的第几条的用户信息
+    		if (i>0 && id <= i) {
+    				user = template.selectOne("getOneUserInfo",id);
+    		}else {
+    			user = null;
+    		}
+		}else {
+			user = null;
+		}
+    	return user;
+    }
+    
     @ApiOperation(value = "添加用户接口",httpMethod = "POST")
     @RequestMapping(value = "/addUser",method = RequestMethod.POST)
     public boolean addUser(HttpServletRequest request,@RequestBody User user){
-        Boolean x = verifyCookies(request);
+    	boolean x = verifyCookies(request);
         int result = 0;
-        if(x != null){
+        if(x){
             result = template.insert("addUser",user);
         }
         if(result>0){
@@ -55,6 +82,39 @@ public class UserManager {
         return false;
     }
 
+    @ApiOperation(value = "获取用户(列表)信息接口",httpMethod = "POST")
+    @RequestMapping(value = "/getUserInfo",method = RequestMethod.POST)
+    public List<User> getUserInfo(HttpServletRequest request,@RequestBody User user){
+    	boolean x = verifyCookies(request);
+        if(x){
+            List<User> users = template.selectList("getUserInfo",user);
+            log.info("getUserInfo获取到的用户数量是" +users.size());
+            return users;
+        }else {
+            return null;
+        }
+    }
+
+
+    @ApiOperation(value = "更新/删除用户接口",httpMethod = "POST")
+    @RequestMapping(value = "/updateUserInfo",method = RequestMethod.POST)
+    public int updateUser(HttpServletRequest request,@RequestBody User user){
+    	boolean x = verifyCookies(request);
+        int i = 0;
+        if(x) {
+            i = template.update("updateUserInfo", user);
+        }
+        log.info("更新数据的条目数为:" + i);
+        return i;
+
+    }
+    
+    /**
+     * 验证请求时携带的cookies信息是否正确
+     * 
+     * @param request
+     * @return
+     */
     private Boolean verifyCookies(HttpServletRequest request) {
         Cookie[] cookies = request.getCookies();
         if(Objects.isNull(cookies)){
@@ -69,33 +129,6 @@ public class UserManager {
             }
         }
         return false;
-    }
-
-    @ApiOperation(value = "获取用户(列表)信息接口",httpMethod = "POST")
-    @RequestMapping(value = "/getUserInfo",method = RequestMethod.POST)
-    public List<User> getUserInfo(HttpServletRequest request,@RequestBody User user){
-        Boolean x = verifyCookies(request);
-        if(x==true){
-            List<User> users = template.selectList("getUserInfo",user);
-            log.info("getUserInfo获取到的用户数量是" +users.size());
-            return users;
-        }else {
-            return null;
-        }
-    }
-
-
-    @ApiOperation(value = "更新/删除用户接口",httpMethod = "POST")
-    @RequestMapping(value = "/updateUserInfo",method = RequestMethod.POST)
-    public int updateUser(HttpServletRequest request,@RequestBody User user){
-        Boolean x = verifyCookies(request);
-        int i = 0;
-        if(x==true) {
-            i = template.update("updateUserInfo", user);
-        }
-        log.info("更新数据的条目数为:" + i);
-        return i;
-
     }
 
 }

@@ -1,8 +1,6 @@
 package com.sunjian.InterfaceTest;
 
 /**
- * Unit test for simple App.
+ * 这是一个SpringBoot的服务，没有测试方法。
  */
-public class AppTest {
-	
-}
+public class AppTest {}

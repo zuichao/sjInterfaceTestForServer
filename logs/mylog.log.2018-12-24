@@ -1,0 +1,216 @@
+2018-12-22 22:33:05.855 [main] INFO  com.sunjian.Application - Starting Application on sunjian-PC with PID 11812 (C:\Users\sunjian\Desktop\InterfaceTest\target\classes started by sunjian in C:\Users\sunjian\Desktop\InterfaceTest)
+2018-12-22 22:33:05.858 [main] INFO  com.sunjian.Application - No active profile set, falling back to default profiles: default
+2018-12-22 22:33:05.892 [main] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@564fabc8: startup date [Sat Dec 22 22:33:05 CST 2018]; root of context hierarchy
+2018-12-22 22:33:06.815 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.sunjian]' package. Please check your configuration.
+2018-12-22 22:33:07.211 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$64fa2d65] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-22 22:33:07.586 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8888 (http)
+2018-12-22 22:33:07.608 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-12-22 22:33:07.609 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.14
+2018-12-22 22:33:07.709 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-12-22 22:33:07.710 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1818 ms
+2018-12-22 22:33:07.827 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-22 22:33:07.831 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-22 22:33:07.831 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-22 22:33:07.831 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-22 22:33:07.831 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-22 22:33:08.614 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/getUserInfo],methods=[POST]}" onto public java.util.List<com.sunjian.model.User> com.sunjian.controller.UserManager.getUserInfo(javax.servlet.http.HttpServletRequest,com.sunjian.model.User)
+2018-12-22 22:33:08.615 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/addUser],methods=[POST]}" onto public boolean com.sunjian.controller.UserManager.addUser(javax.servlet.http.HttpServletRequest,com.sunjian.model.User)
+2018-12-22 22:33:08.617 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/login],methods=[POST]}" onto public java.lang.Boolean com.sunjian.controller.UserManager.login(javax.servlet.http.HttpServletResponse,com.sunjian.model.User)
+2018-12-22 22:33:08.617 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/updateUserInfo],methods=[POST]}" onto public int com.sunjian.controller.UserManager.updateUser(javax.servlet.http.HttpServletRequest,com.sunjian.model.User)
+2018-12-22 22:33:08.618 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-12-22 22:33:08.620 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-12-22 22:33:08.621 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-12-22 22:33:08.621 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-12-22 22:33:08.624 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-22 22:33:08.625 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-22 22:33:08.928 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@564fabc8: startup date [Sat Dec 22 22:33:05 CST 2018]; root of context hierarchy
+2018-12-22 22:33:08.974 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-22 22:33:08.974 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-22 22:33:09.006 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-22 22:33:09.194 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-12-22 22:33:09.199 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-12-22 22:33:09.199 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-12-22 22:33:09.215 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-12-22 22:33:09.225 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-12-22 22:33:09.473 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8888 (http)
+2018-12-22 22:33:09.479 [main] INFO  com.sunjian.Application - Started Application in 3.904 seconds (JVM running for 4.308)
+2018-12-22 22:33:26.363 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-22 22:33:26.363 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-22 22:33:26.386 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2018-12-22 22:33:26.724 [http-nio-8888-exec-1] INFO  com.sunjian.controller.UserManager - 查看到的结果是1
+2018-12-22 22:33:26.781 [http-nio-8888-exec-2] INFO  com.sunjian.controller.UserManager - 查看到的结果是1
+2018-12-22 22:33:26.825 [http-nio-8888-exec-3] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-22 22:33:26.883 [http-nio-8888-exec-3] INFO  com.sunjian.controller.UserManager - 添加用户的数量是:1
+2018-12-22 22:33:28.973 [http-nio-8888-exec-4] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-22 22:33:28.999 [http-nio-8888-exec-4] INFO  com.sunjian.controller.UserManager - getUserInfo获取到的用户数量是1
+2018-12-22 22:33:31.070 [http-nio-8888-exec-5] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-22 22:33:31.074 [http-nio-8888-exec-5] INFO  com.sunjian.controller.UserManager - getUserInfo获取到的用户数量是2
+2018-12-22 22:33:33.175 [http-nio-8888-exec-6] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-22 22:33:33.210 [http-nio-8888-exec-6] INFO  com.sunjian.controller.UserManager - 更新数据的条目数为:1
+2018-12-22 22:33:35.261 [http-nio-8888-exec-7] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-22 22:33:35.319 [http-nio-8888-exec-7] INFO  com.sunjian.controller.UserManager - 更新数据的条目数为:1
+2018-12-23 17:28:45.630 [main] INFO  com.sunjian.Application - Starting Application on Administrator with PID 3660 (E:\Java\iworkspace\sjInterfaceTestForServer\target\classes started by sunjian in E:\Java\iworkspace\sjInterfaceTestForServer)
+2018-12-23 17:28:45.637 [main] INFO  com.sunjian.Application - No active profile set, falling back to default profiles: default
+2018-12-23 17:28:45.833 [main] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1662a77: startup date [Sun Dec 23 17:28:45 CST 2018]; root of context hierarchy
+2018-12-23 17:28:48.496 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.sunjian]' package. Please check your configuration.
+2018-12-23 17:28:49.731 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$127deff7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-23 17:28:51.050 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8888 (http)
+2018-12-23 17:28:51.098 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-12-23 17:28:51.101 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/7.0.69
+2018-12-23 17:28:51.588 [localhost-startStop-1] INFO  org.apache.catalina.startup.TldConfig - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-23 17:28:51.626 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-12-23 17:28:51.626 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5793 ms
+2018-12-23 17:28:51.930 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-23 17:28:51.933 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-23 17:28:51.935 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-23 17:28:51.935 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-23 17:28:51.936 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-23 17:28:54.317 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/getUserInfo],methods=[POST]}" onto public java.util.List<com.sunjian.model.User> com.sunjian.controller.UserManager.getUserInfo(javax.servlet.http.HttpServletRequest,com.sunjian.model.User)
+2018-12-23 17:28:54.319 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/addUser],methods=[POST]}" onto public boolean com.sunjian.controller.UserManager.addUser(javax.servlet.http.HttpServletRequest,com.sunjian.model.User)
+2018-12-23 17:28:54.320 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/updateUserInfo],methods=[POST]}" onto public int com.sunjian.controller.UserManager.updateUser(javax.servlet.http.HttpServletRequest,com.sunjian.model.User)
+2018-12-23 17:28:54.321 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/login],methods=[POST]}" onto public java.lang.Boolean com.sunjian.controller.UserManager.login(javax.servlet.http.HttpServletResponse,com.sunjian.model.User)
+2018-12-23 17:28:54.322 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-12-23 17:28:54.330 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-12-23 17:28:54.332 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-12-23 17:28:54.334 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-12-23 17:28:54.343 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-23 17:28:54.344 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-23 17:28:54.906 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1662a77: startup date [Sun Dec 23 17:28:45 CST 2018]; root of context hierarchy
+2018-12-23 17:28:55.108 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-23 17:28:55.109 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-23 17:28:55.219 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-23 17:28:55.892 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-12-23 17:28:55.912 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-12-23 17:28:55.913 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-12-23 17:28:55.962 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-12-23 17:28:56.045 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-12-23 17:28:57.145 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8888 (http)
+2018-12-23 17:28:57.157 [main] INFO  com.sunjian.Application - Started Application in 12.86 seconds (JVM running for 14.528)
+2018-12-24 08:23:23.789 [main] INFO  com.sunjian.Application - Starting Application on sunjian-PC with PID 10560 (C:\Users\sunjian\Desktop\InterfaceTest\target\classes started by sunjian in C:\Users\sunjian\Desktop\InterfaceTest)
+2018-12-24 08:23:23.791 [main] INFO  com.sunjian.Application - No active profile set, falling back to default profiles: default
+2018-12-24 08:23:23.824 [main] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e07db1f: startup date [Mon Dec 24 08:23:23 CST 2018]; root of context hierarchy
+2018-12-24 08:23:24.556 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.sunjian]' package. Please check your configuration.
+2018-12-24 08:23:24.903 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8628216f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-24 08:23:25.196 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8888 (http)
+2018-12-24 08:23:25.205 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-12-24 08:23:25.206 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/7.0.69
+2018-12-24 08:23:25.355 [localhost-startStop-1] INFO  org.apache.catalina.startup.TldConfig - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-24 08:23:25.365 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-12-24 08:23:25.365 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1541 ms
+2018-12-24 08:23:25.463 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-24 08:23:25.465 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-24 08:23:25.465 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-24 08:23:25.465 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-24 08:23:25.465 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-24 08:23:26.175 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/getUserInfo],methods=[POST]}" onto public java.util.List<com.sunjian.model.User> com.sunjian.controller.UserManager.getUserInfo(javax.servlet.http.HttpServletRequest,com.sunjian.model.User)
+2018-12-24 08:23:26.176 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/login],methods=[POST]}" onto public java.lang.Boolean com.sunjian.controller.UserManager.login(javax.servlet.http.HttpServletResponse,com.sunjian.model.User)
+2018-12-24 08:23:26.176 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/updateUserInfo],methods=[POST]}" onto public int com.sunjian.controller.UserManager.updateUser(javax.servlet.http.HttpServletRequest,com.sunjian.model.User)
+2018-12-24 08:23:26.176 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/addUser],methods=[POST]}" onto public boolean com.sunjian.controller.UserManager.addUser(javax.servlet.http.HttpServletRequest,com.sunjian.model.User)
+2018-12-24 08:23:26.177 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-12-24 08:23:26.179 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-12-24 08:23:26.179 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-12-24 08:23:26.180 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-12-24 08:23:26.182 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-24 08:23:26.182 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-24 08:23:26.388 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e07db1f: startup date [Mon Dec 24 08:23:23 CST 2018]; root of context hierarchy
+2018-12-24 08:23:26.429 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-24 08:23:26.429 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-24 08:23:26.456 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-24 08:23:26.609 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-12-24 08:23:26.614 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-12-24 08:23:26.614 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-12-24 08:23:26.630 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-12-24 08:23:26.639 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-12-24 08:23:26.861 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8888 (http)
+2018-12-24 08:23:26.865 [main] INFO  com.sunjian.Application - Started Application in 3.345 seconds (JVM running for 3.732)
+2018-12-24 08:23:51.883 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-24 08:23:51.883 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-24 08:23:51.895 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2018-12-24 08:23:52.214 [http-nio-8888-exec-1] INFO  com.sunjian.controller.UserManager - 查看到的结果是0
+2018-12-24 08:23:52.288 [http-nio-8888-exec-2] INFO  com.sunjian.controller.UserManager - 查看到的结果是1
+2018-12-24 08:23:52.331 [http-nio-8888-exec-3] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 08:23:52.389 [http-nio-8888-exec-3] INFO  com.sunjian.controller.UserManager - 更新数据的条目数为:1
+2018-12-24 08:23:54.486 [http-nio-8888-exec-4] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 08:23:54.582 [http-nio-8888-exec-4] INFO  com.sunjian.controller.UserManager - 更新数据的条目数为:1
+2018-12-24 08:26:48.733 [http-nio-8888-exec-6] INFO  com.sunjian.controller.UserManager - 查看到的结果是0
+2018-12-24 08:26:48.783 [http-nio-8888-exec-7] INFO  com.sunjian.controller.UserManager - 查看到的结果是1
+2018-12-24 08:26:48.816 [http-nio-8888-exec-8] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 08:26:48.917 [http-nio-8888-exec-8] INFO  com.sunjian.controller.UserManager - 更新数据的条目数为:1
+2018-12-24 08:26:51.021 [http-nio-8888-exec-9] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 08:26:51.060 [http-nio-8888-exec-9] INFO  com.sunjian.controller.UserManager - 更新数据的条目数为:1
+2018-12-24 08:28:05.272 [http-nio-8888-exec-1] INFO  com.sunjian.controller.UserManager - 查看到的结果是1
+2018-12-24 08:28:05.319 [http-nio-8888-exec-2] INFO  com.sunjian.controller.UserManager - 查看到的结果是0
+2018-12-24 08:28:05.348 [http-nio-8888-exec-3] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 08:28:05.398 [http-nio-8888-exec-3] INFO  com.sunjian.controller.UserManager - 添加用户的数量是:1
+2018-12-24 08:28:07.492 [http-nio-8888-exec-4] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 08:28:07.495 [http-nio-8888-exec-4] INFO  com.sunjian.controller.UserManager - getUserInfo获取到的用户数量是1
+2018-12-24 08:28:09.564 [http-nio-8888-exec-5] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 08:28:09.567 [http-nio-8888-exec-5] INFO  com.sunjian.controller.UserManager - getUserInfo获取到的用户数量是2
+2018-12-24 08:28:11.655 [http-nio-8888-exec-6] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 08:28:11.683 [http-nio-8888-exec-6] INFO  com.sunjian.controller.UserManager - 更新数据的条目数为:1
+2018-12-24 08:28:13.755 [http-nio-8888-exec-7] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 08:28:13.784 [http-nio-8888-exec-7] INFO  com.sunjian.controller.UserManager - 更新数据的条目数为:1
+2018-12-24 18:47:53.536 [main] INFO  com.sunjian.Application - Starting Application on sunjian-PC with PID 9556 (E:\Java\iworkspace\sjInterfaceTestForServer\target\classes started by sunjian in E:\Java\iworkspace\sjInterfaceTestForServer)
+2018-12-24 18:47:53.538 [main] INFO  com.sunjian.Application - No active profile set, falling back to default profiles: default
+2018-12-24 18:47:53.577 [main] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e07db1f: startup date [Mon Dec 24 18:47:53 CST 2018]; root of context hierarchy
+2018-12-24 18:47:54.569 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.sunjian]' package. Please check your configuration.
+2018-12-24 18:47:54.918 [main] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$948e5831] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-24 18:47:55.213 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8888 (http)
+2018-12-24 18:47:55.222 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2018-12-24 18:47:55.223 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/7.0.69
+2018-12-24 18:47:55.346 [localhost-startStop-1] INFO  org.apache.catalina.startup.TldConfig - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-24 18:47:55.356 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-12-24 18:47:55.356 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1779 ms
+2018-12-24 18:47:55.442 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-24 18:47:55.444 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-24 18:47:55.444 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-24 18:47:55.444 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-24 18:47:55.444 [localhost-startStop-1] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-24 18:47:56.165 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/getUserInfo],methods=[POST]}" onto public java.util.List<com.sunjian.model.User> com.sunjian.controller.UserManager.getUserInfo(javax.servlet.http.HttpServletRequest,com.sunjian.model.User)
+2018-12-24 18:47:56.166 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/addUser],methods=[POST]}" onto public boolean com.sunjian.controller.UserManager.addUser(javax.servlet.http.HttpServletRequest,com.sunjian.model.User)
+2018-12-24 18:47:56.166 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/login],methods=[POST]}" onto public java.lang.Boolean com.sunjian.controller.UserManager.login(javax.servlet.http.HttpServletResponse,com.sunjian.model.User)
+2018-12-24 18:47:56.166 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v1/updateUserInfo],methods=[POST]}" onto public int com.sunjian.controller.UserManager.updateUser(javax.servlet.http.HttpServletRequest,com.sunjian.model.User)
+2018-12-24 18:47:56.167 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-12-24 18:47:56.169 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-12-24 18:47:56.169 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-12-24 18:47:56.170 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-12-24 18:47:56.171 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-24 18:47:56.172 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-24 18:47:56.381 [main] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7e07db1f: startup date [Mon Dec 24 18:47:53 CST 2018]; root of context hierarchy
+2018-12-24 18:47:56.423 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-24 18:47:56.424 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-24 18:47:56.449 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-24 18:47:56.604 [main] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-12-24 18:47:56.611 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-12-24 18:47:56.611 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-12-24 18:47:56.626 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-12-24 18:47:56.639 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-12-24 18:47:56.890 [main] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8888 (http)
+2018-12-24 18:47:56.894 [main] INFO  com.sunjian.Application - Started Application in 3.651 seconds (JVM running for 4.105)
+2018-12-24 18:53:53.504 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-24 18:53:53.505 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-24 18:53:53.519 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2018-12-24 18:53:53.961 [http-nio-8888-exec-1] INFO  com.sunjian.controller.UserManager - 查看到的结果是1
+2018-12-24 18:53:54.041 [http-nio-8888-exec-2] INFO  com.sunjian.controller.UserManager - 查看到的结果是0
+2018-12-24 18:53:54.104 [http-nio-8888-exec-3] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 18:53:54.140 [http-nio-8888-exec-3] INFO  com.sunjian.controller.UserManager - 添加用户的数量是:1
+2018-12-24 18:53:56.285 [http-nio-8888-exec-4] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 18:53:56.333 [http-nio-8888-exec-4] INFO  com.sunjian.controller.UserManager - getUserInfo获取到的用户数量是1
+2018-12-24 18:53:58.422 [http-nio-8888-exec-5] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 18:53:58.429 [http-nio-8888-exec-5] INFO  com.sunjian.controller.UserManager - getUserInfo获取到的用户数量是2
+2018-12-24 18:54:00.546 [http-nio-8888-exec-6] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 18:54:00.603 [http-nio-8888-exec-6] INFO  com.sunjian.controller.UserManager - 更新数据的条目数为:1
+2018-12-24 18:54:02.666 [http-nio-8888-exec-7] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 18:54:02.701 [http-nio-8888-exec-7] INFO  com.sunjian.controller.UserManager - 更新数据的条目数为:1
+2018-12-24 18:54:15.472 [http-nio-8888-exec-9] INFO  com.sunjian.controller.UserManager - 查看到的结果是1
+2018-12-24 18:54:15.525 [http-nio-8888-exec-10] INFO  com.sunjian.controller.UserManager - 查看到的结果是0
+2018-12-24 18:54:15.560 [http-nio-8888-exec-1] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 18:54:15.798 [http-nio-8888-exec-1] INFO  com.sunjian.controller.UserManager - 添加用户的数量是:1
+2018-12-24 18:54:17.898 [http-nio-8888-exec-2] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 18:54:17.900 [http-nio-8888-exec-2] INFO  com.sunjian.controller.UserManager - getUserInfo获取到的用户数量是1
+2018-12-24 18:54:19.937 [http-nio-8888-exec-3] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 18:54:19.940 [http-nio-8888-exec-3] INFO  com.sunjian.controller.UserManager - getUserInfo获取到的用户数量是2
+2018-12-24 18:54:22.016 [http-nio-8888-exec-4] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 18:54:22.051 [http-nio-8888-exec-4] INFO  com.sunjian.controller.UserManager - 更新数据的条目数为:1
+2018-12-24 18:54:24.132 [http-nio-8888-exec-5] INFO  com.sunjian.controller.UserManager - cookies验证通过
+2018-12-24 18:54:24.168 [http-nio-8888-exec-5] INFO  com.sunjian.controller.UserManager - 更新数据的条目数为:1

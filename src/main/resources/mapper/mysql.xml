@@ -15,6 +15,16 @@
 		values(#{id},#{userName},#{password},#{sex},#{age},#{permission},#{isDelete});
 	</insert>
 	
+	<!-- 获取数据库中user表的用户条数 -->
+	<select id="userCount" resultType="Integer">
+		select count(*) from user
+	</select>
+	<!-- 获取数据库中单条用户信息根据id索引 -->
+	<select id="getOneUserInfo" parameterType="Integer" resultType="com.sunjian.model.User">
+		select * from user
+		where id = #{id}
+	</select>
+	
 	<!-- 获取用户信息SQL -->
 	<select id="getUserInfo" parameterType="com.sunjian.model.User" resultType="com.sunjian.model.User">
 		select * from user
