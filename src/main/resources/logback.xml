@@ -5,9 +5,9 @@
     <property name="FILE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n"/>
     <property name="LOG_PATH" value="${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}"/>
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_PATH}/${LOG_FILE}</file>
+        <file>${LOG_FILE}</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${LOG_PATH}/${LOG_FILE}.%d{yyyy-MM-dd}</fileNamePattern>
+            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}</fileNamePattern>
         </rollingPolicy>
         <encoder charset="UTF-8">
             <pattern>${FILE_LOG_PATTERN}</pattern>
@@ -45,3 +45,12 @@
 
 
 </configuration>
+
+<!-- 
+	 这两个地址，有时不能加
+	 
+	 ${LOG_PATH}/ 第一个file标签处的放在${LOG_FILE}之前 
+
+     ${LOG_PATH}/ 第一个fileNamePattern标签处的放在前边
+     
+-->
