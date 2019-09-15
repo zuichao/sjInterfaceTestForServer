@@ -1,0 +1,18 @@
+node {
+    stage('clear server'){
+     clean install
+    }
+
+    stage('run server'){
+     @echo off
+     cd target
+     set BUILD_ID=dontKillMe
+     start javaw -jar sjInterfaceTestForServer-0.0.1-SNAPSHOT.jar
+    }
+
+    stage('start test'){
+     @echo off
+     cd /sjInterfaceTests
+     test
+    }
+}
